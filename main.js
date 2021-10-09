@@ -38,7 +38,7 @@ function playStream(idVideoTag, stream) {
 
 // openStream()
 //     .then(stream => playStream('localStream', stream));
-var peer = new Peer({ key: 'peerjs', host: 'https://9000-aqua-pelican-fwkm5ofy.ws-us18.gitpod.io', secure: true, port: 443 });
+var peer = new Peer({ key: 'peerjs', host: 'https://9000-scarlet-mule-ug0zg19v.ws-us18.gitpod.io', secure: true, port: 443 });
 peer.on('open',id => {
     $('#my-peer').append(id);
     $('#btnSignUp').click(() => {

@@ -5,21 +5,21 @@ $('#div-chat').hide();
 let customConfig;
 
 $.ajax({
-  url: "https://service.xirsys.com/ice",
-  data: {
-    ident: "vanpho",
-    secret: "2b1c2dfe-4374-11e7-bd72-5a790223a9ce",
-    domain: "vanpho93.github.io",
-    application: "default",
-    room: "default",
-    secure: 1
-  },
-  success: function (data, status) {
-    // data.d is where the iceServers object lives
-    customConfig = data.d;
-    console.log(customConfig);
-  },
-  async: false
+    url: "https://global.xirsys.net",
+    data: {
+        ident: "vuyycc",
+        secret: "d2552d94-28cd-11ec-98cd-0242ac130003",
+        domain: "tdvcall.github.io",
+        application: "default",
+        room: "default",
+        secure: 1
+    },
+    success: function (data, status) {
+        // data.d is where the iceServers object lives
+        customConfig = data.d;
+        console.log(customConfig);
+    },
+    async: false
 });
 
 

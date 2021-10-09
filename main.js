@@ -38,7 +38,7 @@ function playStream(idVideoTag, stream) {
 
 // openStream()
 //     .then(stream => playStream('localStream', stream));
-var peer = new Peer();
+var peer = new Peer({ key: 'peerjs', host: 'https://9000-emerald-dragon-7efg2cbu.ws-us18.gitpod.io', secure: true, port: 443 });
 peer.on('open',id => {
     $('#my-peer').append(id);
     $('#btnSignUp').click(() => {

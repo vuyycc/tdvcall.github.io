@@ -2,26 +2,6 @@ const socket = io('https://call77.herokuapp.com/', { transports: ['websocket'] }
 
 $('#div-chat').hide();
 
-let customConfig;
-
-$.ajax({
-    url: "https://global.xirsys.net",
-    data: {
-        ident: "vuyycc",
-        secret: "d2552d94-28cd-11ec-98cd-0242ac130003",
-        domain: "tdvcall.github.io",
-        application: "default",
-        room: "default",
-        secure: 1
-    },
-    success: function (data, status) {
-        // data.d is where the iceServers object lives
-        customConfig = data.d;
-        console.log(customConfig);
-    },
-    async: false
-});
-
 
 socket.on('DANH_SACH_ONLINE', arrUser => {
     $('#div-chat').show();
@@ -59,7 +39,7 @@ function playStream(idVideoTag, stream) {
 
 // openStream()
 //     .then(stream => playStream('localStream', stream));
-var peer = new Peer({ key: 'peerjs', host: 'mypeer176.herokuapp.com', secure: true, port: 443, config: customConfig  });
+var peer = new Peer({ key: 'peerjs', host: 'mypeer176.herokuapp.com', secure: true, port: 443 });
 peer.on('open',id => {
     $('#my-peer').append(id);
     $('#btnSignUp').click(() => {

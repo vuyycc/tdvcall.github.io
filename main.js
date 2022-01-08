@@ -27,7 +27,7 @@ socket.on('DANG_KY_THAT_BAI', () => {
 
 
 function openStream() {
-    const config = { audio: false, video: true };
+    const config = { audio: true, video: true };
     return navigator.mediaDevices.getUserMedia(config);
 }
 
